@@ -211,7 +211,11 @@ namespace TFSIterationPathServices
         //       Logger.Write(string.Format("Work items loaded: {0}", newWorkItems.Count));
         foreach (var item in newWorkItems)
         {
-          WorkItems.Add(item);
+      
+            if (item.State != "Removed")
+            {
+                WorkItems.Add(item);
+            }
         }
 
         listView.SelectAll();

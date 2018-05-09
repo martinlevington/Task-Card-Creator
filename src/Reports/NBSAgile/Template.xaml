@@ -60,7 +60,7 @@
     </ControlTemplate>
 
     <DataTemplate DataType="{x:Type msFforAgile:TaskCardRow}">
-      <Grid Margin="10">
+      <Grid Margin="20">
         <Grid.RowDefinitions>
           <RowDefinition Height="Auto" />
           <RowDefinition Height="Auto" />
@@ -69,10 +69,10 @@
           <DockPanel  Margin="10" >
             <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem.Id, StringFormat='Task {0}'}" FontSize="13pt" FontWeight="Bold" />
             <StackPanel Orientation="Vertical">
-              <DockPanel HorizontalAlignment="Right">
+              <!--<DockPanel HorizontalAlignment="Right">
                 <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Right" Text="Rank: " FontSize="8pt"/>
                 <TextBlock DockPanel.Dock="Right" HorizontalAlignment="Left" Text="{Binding Path=WorkItem, Converter={StaticResource stackRankConverter}}" FontSize="8pt" />
-              </DockPanel>
+              </DockPanel>-->
               <DockPanel HorizontalAlignment="Right">
                 <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Right" Text="Parent: " FontSize="8pt"/>
                 <TextBlock DockPanel.Dock="Right" HorizontalAlignment="Left" Text="{Binding Path=WorkItem.ParentId}" FontSize="8pt" />
@@ -93,7 +93,7 @@
             </StackPanel>
             <StackPanel Margin="10,5" Orientation="Horizontal">
               <DockPanel Margin="0,0,5,0">
-                <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem, Converter={StaticResource iterationPathConverter}}" FontSize="11pt" />
+                <!--<TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem, Converter={StaticResource iterationPathConverter}}" FontSize="11pt" />-->
               </DockPanel>
             </StackPanel>
           </StackPanel>
@@ -102,19 +102,19 @@
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type msFforAgile:ProductBacklogItemCardRow}">
-      <Grid Margin="10">
+      <Grid Margin="20">
         <Grid.RowDefinitions>
           <RowDefinition Height="Auto" />
           <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Border Grid.Row="0" Background="#B9CDE5" Margin="0" Width="300" BorderBrush="#385D8A"  BorderThickness="2,2,2,0" CornerRadius="16,16,0,0">
+        <Border Grid.Row="0" Background="#B9CDE5" Margin="0" Width="600" BorderBrush="#385D8A"  BorderThickness="2,2,2,0" CornerRadius="16,16,0,0">
           <DockPanel  Margin="10" >
             <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem.Id, StringFormat='User Story {0}'}" FontSize="13pt" FontWeight="Bold" />
             <StackPanel Orientation="Vertical">
-              <DockPanel HorizontalAlignment="Right">
+              <!--<DockPanel HorizontalAlignment="Right">
                 <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Right" Text="Rank: " FontSize="8pt"/>
                 <TextBlock DockPanel.Dock="Right" HorizontalAlignment="Left" Text="{Binding Path=WorkItem, Converter={StaticResource stackRankConverter}}" FontSize="8pt" />
-              </DockPanel>
+              </DockPanel>-->
               <DockPanel HorizontalAlignment="Right">
                 <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Right" Text="Parent: " FontSize="8pt"/>
                 <TextBlock DockPanel.Dock="Right" HorizontalAlignment="Left" Text="{Binding Path=WorkItem.ParentId}" FontSize="8pt" />
@@ -122,7 +122,7 @@
             </StackPanel>
           </DockPanel>
         </Border>
-        <Border Grid.Row="1" Margin="0" Width="300"  BorderBrush="#385D8A"  BorderThickness="2,0,2,2" CornerRadius="0,0,16,16">
+        <Border Grid.Row="1" Margin="0" Width="600"  BorderBrush="#385D8A"  BorderThickness="2,0,2,2" CornerRadius="0,0,16,16">
           <StackPanel>
             <TextBlock Margin="10,5,10,0" Text="{Binding Path=WorkItem.Title}" TextWrapping="Wrap" Height="50" FontSize="13pt" />
             <TextBlock Margin="10,0" Text="{Binding Path=WorkItem.Description}" TextWrapping="Wrap" Height="110" FontSize="10pt" TextTrimming="CharacterEllipsis"/>
@@ -132,7 +132,7 @@
             </StackPanel>
             <StackPanel Margin="10,5" Orientation="Horizontal">
               <DockPanel Margin="0,0,5,0">
-                <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem, Converter={StaticResource iterationPathConverter}}" FontSize="11pt" />
+                <!--<TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem, Converter={StaticResource iterationPathConverter}}" FontSize="11pt" />-->
               </DockPanel>
             </StackPanel>
           </StackPanel>
@@ -141,7 +141,7 @@
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type msFforAgile:BugCardRow}">
-      <Grid Margin="10">
+      <Grid Margin="20">
         <Grid.RowDefinitions>
           <RowDefinition Height="Auto" />
           <RowDefinition Height="Auto" />
@@ -150,10 +150,10 @@
           <DockPanel  Margin="10" >
             <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem.Id, StringFormat='Bug {0}'}" FontSize="13pt" FontWeight="Bold" />
             <StackPanel Orientation="Vertical">
-              <DockPanel HorizontalAlignment="Right">
+              <!--<DockPanel HorizontalAlignment="Right">
                 <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Right" Text="Rank: " FontSize="8pt"/>
                 <TextBlock DockPanel.Dock="Right" HorizontalAlignment="Left" Text="{Binding Path=WorkItem, Converter={StaticResource stackRankConverter}}" FontSize="8pt" />
-              </DockPanel>
+              </DockPanel>-->
               <DockPanel HorizontalAlignment="Right">
                 <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Right" Text="Parent: " FontSize="8pt"/>
                 <TextBlock DockPanel.Dock="Right" HorizontalAlignment="Left" Text="{Binding Path=WorkItem.ParentId}" FontSize="8pt" />
@@ -173,7 +173,7 @@
             </StackPanel>
             <StackPanel Margin="10,5" Orientation="Horizontal">
               <DockPanel Margin="0,0,5,0">
-                <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem, Converter={StaticResource iterationPathConverter}}" FontSize="11pt" />
+                <!--<TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem, Converter={StaticResource iterationPathConverter}}" FontSize="11pt" />-->
               </DockPanel>
             </StackPanel>
           </StackPanel>
@@ -182,17 +182,17 @@
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type msFforAgile:UnknownCardRow}">
-            <Grid Margin="10">
+            <Grid Margin="20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Border Grid.Row="0" Background="LightGray"  Margin="0" Width="300" BorderBrush="Black"  BorderThickness="2,2,2,0" CornerRadius="16,16,0,0">
+                <Border Grid.Row="0" Background="LightGray"  Margin="0" Width="600" BorderBrush="Black"  BorderThickness="2,2,2,0" CornerRadius="16,16,0,0">
                     <StackPanel>
                         <TextBlock Margin="10" DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem, Converter={StaticResource unknownTypeConverter}}" FontSize="13pt" FontWeight="Bold" />
                     </StackPanel>
                 </Border>
-                <Border Grid.Row="1" Margin="0" Width="300"  BorderBrush="Black"  BorderThickness="2,0,2,2" CornerRadius="0,0,16,16">
+                <Border Grid.Row="1" Margin="0" Width="600"  BorderBrush="Black"  BorderThickness="2,0,2,2" CornerRadius="0,0,16,16">
                     <StackPanel>
                         <TextBlock Margin="10,5,10,0" Text="{Binding Path=WorkItem.Title}" TextWrapping="Wrap" Height="50" FontSize="13pt" />
                         <TextBlock Margin="10,0" Text="{Binding Path=WorkItem.Description}" TextWrapping="Wrap" Height="110" FontSize="10pt" TextTrimming="CharacterEllipsis"/>
@@ -202,7 +202,7 @@
                         </StackPanel>
                         <StackPanel Margin="10,5" Orientation="Horizontal">
                             <DockPanel Margin="0,0,5,0">
-                <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem, Converter={StaticResource iterationPathConverter}}" FontSize="11pt" />
+                <!--<TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding Path=WorkItem, Converter={StaticResource iterationPathConverter}}" FontSize="11pt" />-->
                             </DockPanel>
                         </StackPanel>
                     </StackPanel>

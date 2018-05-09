@@ -81,7 +81,12 @@ namespace TFSIterationPathServices
           // Add extra fields
           ri.Fields.Add("IterationPath", w.IterationPath);
           ri.Fields.Add("AreaPath", w.AreaPath);
-          l.Add(ri);
+
+            // do not add removed items to a report
+            if (ri.State != "Removed")
+            {
+                l.Add(ri);
+            }
         }
         return l;
       }

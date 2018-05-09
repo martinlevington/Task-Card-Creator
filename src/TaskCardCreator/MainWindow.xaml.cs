@@ -283,43 +283,49 @@ namespace TaskCardCreator
 
         private async void CheckForNewVersion()
         {
-            var result = await Task.Run(async () =>
-            {
-                try
-                {
-                    var client = new HttpClient();
-                    var getStringTask = client.GetStringAsync("https://github.com/frederiksen/Task-Card-Creator/releases.atom");
-                    var contents = await getStringTask;
 
-                    DateTime latestReleaseDateTime = new DateTime(1980, 1, 1);
-                    string latestTitle = string.Empty;
+           
 
-                    var xml = new XmlDocument();
-                    xml.LoadXml(contents);
+            //var result = await Task.Run(async () =>
+            //{
+            //    try
+            //    {
+            //        var client = new HttpClient();
+            //        var getStringTask = client.GetStringAsync("https://github.com/frederiksen/Task-Card-Creator/releases.atom");
+            //        var contents = await getStringTask;
 
-                    var nsmgr = new XmlNamespaceManager(xml.NameTable);
-                    nsmgr.AddNamespace("msb", "http://www.w3.org/2005/Atom");
+            //        DateTime latestReleaseDateTime = new DateTime(1980, 1, 1);
+            //        string latestTitle = string.Empty;
 
-                    var releases = xml.SelectNodes("/msb:feed/msb:entry", nsmgr);
+            //        var xml = new XmlDocument();
+            //        xml.LoadXml(contents);
 
-                    foreach(XmlNode release in releases)
-                    {
-                        var updated = release["updated"].InnerText;
-                        var updatedTime = DateTime.Parse(updated);
-                        if (updatedTime > latestReleaseDateTime)
-                        {
-                            latestReleaseDateTime = updatedTime;
-                            latestTitle = release["title"].InnerText;
-                        }
-                    }
+            //        var nsmgr = new XmlNamespaceManager(xml.NameTable);
+            //        nsmgr.AddNamespace("msb", "http://www.w3.org/2005/Atom");
 
-                    return latestTitle;
-                }
-                catch (Exception)
-                {
-                    return string.Empty;
-                }
-            });
+            //        var releases = xml.SelectNodes("/msb:feed/msb:entry", nsmgr);
+
+            //        foreach(XmlNode release in releases)
+            //        {
+            //            var updated = release["updated"].InnerText;
+            //            var updatedTime = DateTime.Parse(updated);
+            //            if (updatedTime > latestReleaseDateTime)
+            //            {
+            //                latestReleaseDateTime = updatedTime;
+            //                latestTitle = release["title"].InnerText;
+            //            }
+            //        }
+
+            //        return latestTitle;
+            //    }
+            //    catch (Exception)
+            //    {
+            //        return string.Empty;
+            //    }
+            //});
+
+           var result = "";
+
             if (!string.IsNullOrEmpty(result) && result != "Task Card Creator 8.0")
             {
                 var text = new TextBlock() { Margin = new Thickness(15), Text = "There is a new version available for download: " + result };

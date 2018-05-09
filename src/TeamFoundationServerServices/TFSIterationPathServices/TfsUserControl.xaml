@@ -73,6 +73,7 @@
               </GridViewColumn.CellTemplate>
             </GridViewColumn>
             <GridViewColumn Width="50" Header="Id" DisplayMemberBinding="{Binding Id}"  />
+              <GridViewColumn Width="50" Header="Type" DisplayMemberBinding="{Binding Type.Name}"  />
             <GridViewColumn Width="230" Header="Title" DisplayMemberBinding="{Binding Title}" />
             <GridViewColumn Width="80" Header="State" DisplayMemberBinding="{Binding State}" />
           </GridView>
