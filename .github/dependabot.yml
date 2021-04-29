@@ -1,0 +1,40 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: Microsoft.IdentityModel.Tokens
+    versions:
+    - 6.10.0
+    - 6.10.1
+    - 6.10.2
+    - 6.8.0
+    - 6.9.0
+  - dependency-name: Microsoft.IdentityModel.Logging
+    versions:
+    - 6.10.0
+    - 6.10.1
+    - 6.10.2
+    - 6.8.0
+    - 6.9.0
+  - dependency-name: System.IdentityModel.Tokens.Jwt
+    versions:
+    - 6.10.0
+    - 6.10.1
+    - 6.10.2
+    - 6.8.0
+    - 6.9.0
+  - dependency-name: WindowsAzure.ServiceBus
+    versions:
+    - 6.0.3
+    - 6.0.4
+    - 6.0.5
+  - dependency-name: Microsoft.IdentityModel.Clients.ActiveDirectory
+    versions:
+    - 5.2.8
+  - dependency-name: Newtonsoft.Json
+    versions:
+    - 12.0.3
